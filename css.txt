@@ -1,0 +1,422 @@
+/* =========================
+   VARIABLES
+========================= */
+
+:root{
+    --gold:#D4AF37;
+    --gold-dark:#B8860B;
+    --black:#0B0B0B;
+    --gray:#1A1A1A;
+    --light:#F5F5F5;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--black);
+    color:white;
+    font-family:'Segoe UI',sans-serif;
+    overflow-x:hidden;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.custom-navbar{
+    background:rgba(0,0,0,.95);
+    border-bottom:2px solid var(--gold);
+    backdrop-filter:blur(10px);
+}
+
+.navbar-brand{
+    color:var(--gold)!important;
+    font-size:1.7rem;
+    letter-spacing:1px;
+}
+
+.nav-link{
+    color:white!important;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:var(--gold)!important;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero-section{
+
+    height:100vh;
+
+    background:
+    url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=2070');
+
+    background-size:cover;
+    background-position:center;
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+    width:100%;
+    height:100%;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.8),
+    rgba(0,0,0,.9)
+    );
+
+}
+
+.hero-content{
+
+    position:relative;
+    z-index:2;
+    text-align:center;
+
+}
+
+.hero-content h1{
+
+    color:var(--gold);
+    text-shadow:0 0 15px rgba(212,175,55,.6);
+
+}
+
+.hero-content p{
+
+    max-width:700px;
+    margin:auto;
+    color:#ddd;
+
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn-gold{
+
+    background:var(--gold);
+    color:black;
+    border:none;
+    font-weight:bold;
+    padding:12px 25px;
+
+}
+
+.btn-gold:hover{
+
+    background:var(--gold-dark);
+    color:white;
+    transform:translateY(-2px);
+
+}
+
+/* =========================
+   TITULOS
+========================= */
+
+.section-title{
+
+    color:var(--gold);
+    font-weight:bold;
+    position:relative;
+
+}
+
+.section-title::after{
+
+    content:"";
+
+    width:120px;
+    height:3px;
+
+    background:var(--gold);
+
+    display:block;
+    margin:10px auto;
+
+}
+
+/* =========================
+   ESTADISTICAS
+========================= */
+
+.stats-card{
+
+    background:var(--gray);
+
+    border:1px solid var(--gold);
+
+    border-radius:15px;
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+.stats-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 10px 30px rgba(212,175,55,.2);
+
+}
+
+.stats-card i{
+
+    color:var(--gold);
+
+}
+
+.stats-card h2{
+
+    color:var(--gold);
+    font-size:2.5rem;
+
+}
+
+/* =========================
+   BUSCADOR
+========================= */
+
+.search-box{
+
+    position:relative;
+    max-width:800px;
+    margin:auto;
+
+}
+
+.search-box i{
+
+    position:absolute;
+    top:15px;
+    left:15px;
+
+    color:var(--gold);
+
+}
+
+.search-box input{
+
+    padding-left:45px;
+    height:55px;
+
+    background:#181818;
+    color:white;
+
+    border:2px solid var(--gold);
+
+}
+
+.search-box input:focus{
+
+    background:#181818;
+    color:white;
+
+    border-color:var(--gold);
+
+    box-shadow:
+    0 0 15px rgba(212,175,55,.3);
+
+}
+
+/* =========================
+   TARJETAS LIBROS
+========================= */
+
+.book-card{
+
+    background:#171717;
+
+    border:none;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+    height:100%;
+
+}
+
+.book-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 10px 30px rgba(212,175,55,.2);
+
+}
+
+.book-card img{
+
+    height:380px;
+    object-fit:cover;
+
+}
+
+.book-card .card-body{
+
+    padding:20px;
+
+}
+
+.book-card h5{
+
+    color:var(--gold);
+    font-weight:bold;
+
+}
+
+.book-card p{
+
+    color:#ddd;
+
+}
+
+.badge-category{
+
+    background:var(--gold);
+    color:black;
+    font-weight:bold;
+
+}
+
+/* =========================
+   BOTONES ACCIONES
+========================= */
+
+.btn-edit{
+
+    background:#0d6efd;
+    color:white;
+
+}
+
+.btn-delete{
+
+    background:#dc3545;
+    color:white;
+
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.custom-modal{
+
+    background:#111;
+    color:white;
+
+    border:1px solid var(--gold);
+
+}
+
+.custom-modal .modal-header{
+
+    border-bottom:1px solid var(--gold);
+
+}
+
+.custom-modal .modal-footer{
+
+    border-top:1px solid var(--gold);
+
+}
+
+.custom-modal input{
+
+    background:#1a1a1a;
+    color:white;
+    border:1px solid var(--gold);
+
+}
+
+.custom-modal input:focus{
+
+    background:#1a1a1a;
+    color:white;
+
+    border-color:var(--gold);
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    margin-top:80px;
+
+    background:#050505;
+
+    border-top:2px solid var(--gold);
+
+    padding:40px 0;
+
+}
+
+.footer h4{
+
+    color:var(--gold);
+
+}
+
+.footer p{
+
+    color:#bbb;
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+.hero-content h1{
+
+    font-size:2.5rem;
+
+}
+
+.book-card img{
+
+    height:300px;
+
+}
+
+}

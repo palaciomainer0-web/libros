@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Saber Digital</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-book-open me-2"></i>
+                SABER DIGITAL
+            </a>
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#estadisticas">
+                            Estadísticas
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#catalogo">
+                            Catálogo
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- HERO -->
+
+    <section id="inicio" class="hero-section">
+
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+
+            <h1 class="display-3 fw-bold">
+                Biblioteca Escolar Premium
+            </h1>
+
+            <p class="lead mt-3">
+                Gestión inteligente de libros utilizando JavaScript,
+                Programación Orientada a Objetos y Bootstrap.
+            </p>
+
+            <button
+                class="btn btn-gold btn-lg mt-3"
+                data-bs-toggle="modal"
+                data-bs-target="#modalLibro">
+
+                <i class="fas fa-plus-circle me-2"></i>
+                Agregar Libro
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ESTADÍSTICAS -->
+
+    <section id="estadisticas" class="container py-5">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Estadísticas del Catálogo
+            </h2>
+
+            <p>
+                Información actualizada automáticamente
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="stats-card">
+
+                    <i class="fas fa-book fa-3x mb-3"></i>
+
+                    <h2 id="totalLibros">
+                        0
+                    </h2>
+
+                    <p>
+                        Libros Registrados
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="stats-card">
+
+                    <i class="fas fa-user-pen fa-3x mb-3"></i>
+
+                    <h2 id="totalAutores">
+                        0
+                    </h2>
+
+                    <p>
+                        Autores
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="stats-card">
+
+                    <i class="fas fa-layer-group fa-3x mb-3"></i>
+
+                    <h2 id="totalCategorias">
+                        0
+                    </h2>
+
+                    <p>
+                        Categorías
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BUSCADOR -->
+
+    <section class="container mb-5">
+
+        <div class="search-box">
+
+            <i class="fas fa-search"></i>
+
+            <input
+                type="text"
+                id="buscar"
+                class="form-control"
+                placeholder="Buscar por título o autor...">
+
+        </div>
+
+    </section>
+
+    <!-- CATÁLOGO -->
+
+    <section id="catalogo" class="container pb-5">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Catálogo de Libros
+            </h2>
+
+            <p>
+                Obras reconocidas mundialmente
+            </p>
+
+        </div>
+
+        <div class="row g-4" id="contenedorLibros">
+
+            <!-- JS genera las cards aquí -->
+
+        </div>
+
+    </section>
+
+    <!-- MODAL NUEVO LIBRO -->
+
+    <div
+        class="modal fade"
+        id="modalLibro"
+        tabindex="-1">
+
+        <div class="modal-dialog modal-lg">
+
+            <div class="modal-content custom-modal">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+
+                        <i class="fas fa-book-medical me-2"></i>
+                        Registrar Nuevo Libro
+
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+
+                            <label class="form-label">
+                                Título
+                            </label>
+
+                            <input
+                                type="text"
+                                id="titulo"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+
+                            <label class="form-label">
+                                Autor
+                            </label>
+
+                            <input
+                                type="text"
+                                id="autor"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+
+                            <label class="form-label">
+                                Año
+                            </label>
+
+                            <input
+                                type="number"
+                                id="anio"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+
+                            <label class="form-label">
+                                Categoría
+                            </label>
+
+                            <input
+                                type="text"
+                                id="categoria"
+                                class="form-control">
+
+                        </div>
+
+                        <div class="col-12 mb-3">
+
+                            <label class="form-label">
+                                URL Imagen (opcional)
+                            </label>
+
+                            <input
+                                type="text"
+                                id="imagen"
+                                class="form-control">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+
+                        Cancelar
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-gold"
+                        onclick="agregarLibro()">
+
+                        <i class="fas fa-floppy-disk me-2"></i>
+                        Guardar Libro
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container text-center">
+
+            <h4>
+                <i class="fas fa-book-open me-2"></i>
+                Biblioteca Saber Digital
+            </h4>
+
+            <p class="mt-3">
+                Proyecto desarrollado con HTML5, CSS3,
+                Bootstrap 5 y JavaScript Orientado a Objetos.
+            </p>
+
+            <p class="mb-0">
+                © 2026 - Todos los derechos reservados
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS propio -->
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
